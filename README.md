@@ -1,4 +1,4 @@
-# protalent
+# protalent_eksad
 
 A new Flutter project.
 
