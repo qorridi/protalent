@@ -6,6 +6,7 @@ import 'package:protalent_eksad/public_small/small_career/small_career2.dart';
 import 'package:protalent_eksad/public_small/small_career/small_career3.dart';
 import 'package:protalent_eksad/public_small/small_career/small_career4.dart';
 import 'package:protalent_eksad/public_small/small_footer.dart';
+import 'package:protalent_eksad/widget/drawer.dart';
 
 import '../../appbar/appbar_baru.dart';
 import '../../footer.dart';
@@ -30,35 +31,60 @@ class Career extends StatefulWidget {
 }
 
 class _CareerState extends State<Career> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     setPageTitle('Career Protalent', context);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      key: _scaffoldKey,
         appBar: ResponsiveWidget.isSmallScreen(context)
-            ? AppbarHomeSmall(screenSize)
+            ? AppBarKecil()
             : AppbarHomeLarge(screenSize, context, Colors.black, Colors.black,
                 Colors.black, Colors.blue, Colors.black),
+        drawer: DrawerProtalent(),
         body: ResponsiveWidget.isSmallScreen(context)
-        ? ListView(
-          children: const [
-            Career1_small(),
-            Career2_small(),
-            Career3_small(),
-            Career4_small(),
-            FooterSmall(),
-          ],
-        )
-        : ListView(
-        children: const [
-          Career1(),
-          Career1_2(),
-          Career2(),
-          Career3(),
-          Footer(),
-    ],
-    ),
+            ? ListView(
+                children: const [
+                  Career1_small(),
+                  Career2_small(),
+                  Career3_small(),
+                  Career4_small(),
+                  FooterSmall(),
+                ],
+              )
+            : ListView(
+                children:  [
+                  const Career1(),
+                  const Career1_2(),
+                  const Career2(),
+                  const Career3(),
+                  Footer(),
+                ],
+              ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: WAChat());
+  }
+
+  AppBar AppBarKecil() {
+    return AppBar(
+      leading: IconButton(
+        onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+        icon: Icon(
+          Icons.list_outlined,
+          size: 30,
+          color: Colors.black,
+        ),
+      ),
+      backgroundColor: Colors.white,
+      centerTitle: true,
+      title: Container(
+        child: SizedBox(
+          height: 50,
+          width: 150,
+          child: Image.asset("assets/logo/protalent.png"),
+        ),
+      ),
+    );
   }
 }

@@ -26,7 +26,7 @@ AppBar AppbarHomeSmall(Size screenSize) {
             child: SizedBox(
               height: 50,
               width: 150,
-              child: Image.asset("assets/logo/logo_protalent.png"),
+              child: Image.asset("assets/logo/protalent.png"),
             ),
           ),
           Spacer(),
@@ -40,7 +40,7 @@ AppBar AppbarHomeLarge(Size screenSize, BuildContext context, Color home,
     Color aboutUs, Color ourServices, Color career, Color contactUs) {
   return AppBar(
     backgroundColor: Colors.white,
-    toolbarHeight: 100,
+    toolbarHeight: 80,
     leadingWidth: screenSize.width * 0.3,
     leading: Row(
       children: [

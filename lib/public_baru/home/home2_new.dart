@@ -11,24 +11,24 @@ class HomeNew2 extends StatelessWidget {
     return Container(
       width: screenSize.width * 0.5,
       color: const Color.fromARGB(255, 227, 235, 253),
-      height: 350,
+      height: 280,
       padding: EdgeInsets.only(
-        left: screenSize.width * 0.10,
-        right: screenSize.width * 0.10,
+        left: screenSize.width * 0.105,
+        right: screenSize.width * 0.11,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Spacer(flex: 2,),
+          Spacer(flex: 1,),
           Container(
             width: screenSize.width,
             child: Text('How do we help ?',
                 style: GoogleFonts.poppins(
-                    fontSize: 30,
+                    fontSize: 27,
                     color: const Color.fromARGB(255, 12, 66, 101),
                     fontWeight: FontWeight.bold)),
           ),
-          Spacer(flex: 2,),
+          Spacer(flex: 1,),
           Container(
             width: screenSize.width,
             child: Text(
@@ -36,8 +36,8 @@ class HomeNew2 extends StatelessWidget {
                 'operational efficiency with a recruitment solution customized to your needs.',
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    letterSpacing: 1.1,
+                    fontSize: 16,
+                    letterSpacing: 1.3,
                     height: 1.3,
                     fontWeight: FontWeight.w500)),
           ),
@@ -50,8 +50,8 @@ class HomeNew2 extends StatelessWidget {
                 'This will guarantee a high retention rate and employee satisfaction.',
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    letterSpacing: 1.1,
+                    fontSize: 16,
+                    letterSpacing: 1.3,
                     height: 1.3,
                     fontWeight: FontWeight.w500)),
           ),
@@ -63,8 +63,8 @@ class HomeNew2 extends StatelessWidget {
                 'We adapt to market shifts with a promise to deliver and make it happen.',
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    letterSpacing: 1.1,
+                    fontSize: 16,
+                    letterSpacing: 1.3,
                     height: 1.3,
                     fontWeight: FontWeight.w500)),
           ),

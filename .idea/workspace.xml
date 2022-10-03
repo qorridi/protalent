@@ -1,22 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0829c716-39b1-4dd4-aceb-796d2b0a70a6" name="Changes" comment="" />
+    <list default="true" id="1bbcd832-b7e3-4dc5-b81d-d7db0c5cb4ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/file/empty.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin/client/clientControl_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin/contact/contactList.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin/contact/contactList_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin/new_sidemenu.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin/sosmed_dashboard.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin/talentManagement/talentManagement.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin/talentManagement/talentManagement_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api/page_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api/setting_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api/sosmed_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api/user_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/client/newsidemenu_client.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase/firebase_auth_methods.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase/forgot_password.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase/showOtpDialog.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase/showSnackbar_Alertdialog.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firebase_options.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/model/user_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/client/client_dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/client/client_dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/client/data_sources.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/client/data_sources.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/dashboard/desc_talent.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/dashboard/desc_talent.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/dashboard/main_dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/dashboard/main_dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/dashboard/side_talent.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/dashboard/side_talent.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/master_data/data_industry.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/master_data/data_industry.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/master_data/industry.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/master_data/industry.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/master_data/level.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/master_data/level.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/master_data/location.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/master_data/location.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/master_data/master_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/master_data/master_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/master_data/position.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/master_data/position.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/master_data/skills.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/master_data/skills.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/pages/pages_dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/pages/pages_dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/setting_dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/setting_dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/talent_manage/add_talent.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/talent_manage/add_talent.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/talent_manage/side_manage_talent.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/talent_manage/side_manage_talent.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/admin/talent_manage/talent_manage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/admin/talent_manage/talent_manage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/appbar/appbar_baru.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/appbar/appbar_baru.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/client/find_talent.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client/find_talent.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/client/hired_talent.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client/hired_talent.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/client/my_employee.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client/my_employee.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/client/sidemenu_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client/sidemenu_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/const/text_dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/const/text_dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/footer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/footer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/homepage_new.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/homepage_new.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/career/career.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/career/career.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/career/career1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/career/career1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/career/career1_2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/career/career1_2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/career/career2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/career/career2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/career/career3.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/career/career3.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/contact_us_baru/contact_us1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/contact_us_baru/contact_us1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/contact_us_baru/contact_us2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/contact_us_baru/contact_us2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/contact_us_baru/contact_us_baru.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/contact_us_baru/contact_us_baru.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/home/home1_new.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/home/home1_new.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/home/home2_new.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/home/home2_new.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/home/home3_new.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/home/home3_new.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/home/home4_new.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/home/home4_new.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/our_services/our_services.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/our_services/our_services.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/our_services/our_services1a.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/our_services/our_services1a.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/our_services/our_services1b.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/our_services/our_services1b.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_baru/our_services/our_services2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_baru/our_services/our_services2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/public_small/small_footer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/public_small/small_footer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/register.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/botton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widget/botton.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/whatsapp.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widget/whatsapp.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/favicon.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2E1GvrGsee9KXpxA7QsgV5b4M8H" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
-  </component>
+  <component name="ProjectId" id="2FbWBCnTFoLuWvxWbyy8Rs0VSMH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,26 +105,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../ddms-h1/ddms-h1-projects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="RunManager">
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0829c716-39b1-4dd4-aceb-796d2b0a70a6" name="Changes" comment="" />
-      <created>1661755910463</created>
+      <changelist id="1bbcd832-b7e3-4dc5-b81d-d7db0c5cb4ed" name="Default Changelist" comment="" />
+      <created>1664761126071</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1661755910463</updated>
-      <workItem from="1661755917006" duration="4764000" />
+      <updated>1664761126071</updated>
+      <workItem from="1664761127673" duration="478000" />
     </task>
     <servers />
   </component>
@@ -60,5 +139,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

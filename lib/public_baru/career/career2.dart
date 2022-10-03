@@ -27,13 +27,13 @@ class _Career2State extends State<Career2> {
             children: [
               Container(
                 width: screenSize.width * 0.5,
-                height: screenSize.height * 0.07,
+                height: screenSize.height * 0.1,
                 child: Text(
                   "Career Opportunities",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     color: const Color(0xff1e5ea8),
-                    fontSize: 36,
+                    fontSize: 27,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -48,7 +48,7 @@ class _Career2State extends State<Career2> {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                       color: const Color(0xff111111),
-                      fontSize: 17,
+                      fontSize: 16,
                       letterSpacing: 1.3,
                       height: 1.3,
                       fontWeight: FontWeight.w500),
@@ -64,7 +64,7 @@ class _Career2State extends State<Career2> {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                       color: const Color(0xff111111),
-                      fontSize: 17,
+                      fontSize: 16,
                       letterSpacing: 1.3,
                       height: 1.3,
                       fontWeight: FontWeight.w500),
@@ -82,25 +82,18 @@ class _Career2State extends State<Career2> {
                     child: Column(
                       children: [
                         Container(
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
+                          width: screenSize.width * 0.5,
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
-                            widget: Container(
-                              width: 60,
+                            widget: Image.asset(
+                              'assets/icons/icon-service-1.png',
                               height: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(100),
-                                border: Border.all(
-                                    color:
-                                        const Color.fromARGB(255, 4, 97, 184),
-                                    width: 1),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/icons/icon-service-1.png',
-                                  ),
-                                ),
-                              ),
+                              width: 60,
                             ),
                           ),
+                       
                         ),
                         const SizedBox(
                           height: 20,
@@ -114,7 +107,7 @@ class _Career2State extends State<Career2> {
                               "PERMANENT POSITIONS",
                               style: TextStyle(
                                   color: Colors.blueAccent,
-                                  fontSize: 17,
+                                  fontSize: 16,
                                   letterSpacing: 1.1,
                                   fontWeight: FontWeight.w600),
                               textAlign: TextAlign.center,
@@ -133,7 +126,7 @@ class _Career2State extends State<Career2> {
                             child: Text(
                               "Our understanding of the business and strong network helps find you a job that fits your skills, interests, and goals.",
                               style: GoogleFonts.poppins(
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.3,
                                   height: 1.4),
@@ -149,25 +142,18 @@ class _Career2State extends State<Career2> {
                     child: Column(
                       children: [
                         Container(
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
+                          width: screenSize.width * 0.5,
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
-                            widget: Container(
-                              width: 60,
+                            widget: Image.asset(
+                              'assets/icons/icon-service-2.png',
                               height: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(100),
-                                border: Border.all(
-                                    color:
-                                        const Color.fromARGB(255, 4, 97, 184),
-                                    width: 1),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/icons/icon-service-2.png',
-                                  ),
-                                ),
-                              ),
+                              width: 60,
                             ),
                           ),
+                     
                         ),
                         const SizedBox(
                           height: 20,
@@ -181,7 +167,7 @@ class _Career2State extends State<Career2> {
                               "CONTRACT-TO-HIRE",
                               style: TextStyle(
                                   color: Colors.blueAccent,
-                                  fontSize: 17,
+                                  fontSize: 16,
                                   letterSpacing: 1.1,
                                   fontWeight: FontWeight.w600),
                               textAlign: TextAlign.center,
@@ -200,7 +186,7 @@ class _Career2State extends State<Career2> {
                             child: Text(
                               "Everyone knows that the right experts can work wonders for your career by getting you much-needed attention.",
                               style: GoogleFonts.poppins(
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.3,
                                   height: 1.4),
@@ -216,25 +202,18 @@ class _Career2State extends State<Career2> {
                     child: Column(
                       children: [
                         Container(
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
+                          width: screenSize.width * 0.5,
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
-                            widget: Container(
-                              width: 60,
+                            widget: Image.asset(
+                              'assets/icons/icon-service-3.png',
                               height: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(100),
-                                border: Border.all(
-                                    color:
-                                        const Color.fromARGB(255, 4, 97, 184),
-                                    width: 1),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/icons/icon-service-3.png',
-                                  ),
-                                ),
-                              ),
+                              width: 60,
                             ),
                           ),
+                    
                         ),
                         const SizedBox(
                           height: 20,
@@ -248,7 +227,7 @@ class _Career2State extends State<Career2> {
                               "PROJECT BASIS",
                               style: TextStyle(
                                   color: Colors.blueAccent,
-                                  fontSize: 17,
+                                  fontSize: 16,
                                   letterSpacing: 1.1,
                                   fontWeight: FontWeight.w600),
                               textAlign: TextAlign.center,
@@ -267,7 +246,7 @@ class _Career2State extends State<Career2> {
                             child: Text(
                               "We find positions that put your right at the heart of the business and disruptive change. Step into the future.",
                               style: GoogleFonts.poppins(
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.3,
                                   height: 1.4),
@@ -283,23 +262,15 @@ class _Career2State extends State<Career2> {
                     child: Column(
                       children: [
                         Container(
+                          padding:
+                              EdgeInsets.only(top: screenSize.height * 0.01),
+                          width: screenSize.width * 0.5,
                           child: Animasi_Kiri_Kanan(
                             screenSize: screenSize,
-                            widget: Container(
-                              width: 60,
+                            widget: Image.asset(
+                              'assets/icons/icon-service-4.png',
                               height: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(100),
-                                border: Border.all(
-                                    color:
-                                        const Color.fromARGB(255, 4, 97, 184),
-                                    width: 1),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/icons/icon-service-4.png',
-                                  ),
-                                ),
-                              ),
+                              width: 60,
                             ),
                           ),
                         ),
@@ -315,7 +286,7 @@ class _Career2State extends State<Career2> {
                               "INTERNAL STAFF",
                               style: TextStyle(
                                   color: Colors.blueAccent,
-                                  fontSize: 17,
+                                  fontSize: 16,
                                   letterSpacing: 1.1,
                                   fontWeight: FontWeight.w600),
                               textAlign: TextAlign.center,
@@ -334,7 +305,7 @@ class _Career2State extends State<Career2> {
                             child: Text(
                               "Join us to advance your career growth",
                               style: GoogleFonts.poppins(
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.3,
                                   height: 1.4),

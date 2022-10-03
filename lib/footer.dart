@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:protalent_eksad/api/sosmed_api.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'api/setting_api.dart';
+
 class Footer extends StatelessWidget {
-  const Footer({Key? key}) : super(key: key);
+  Footer({Key? key}) : super(key: key);
+  String ln = '';
+  String tw = '';
+  String ig = '';
+  String yt = '';
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
         width: screenSize.width,
-        height: screenSize.height * 0.78,
+        height: screenSize.height * 0.83,
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -25,7 +32,7 @@ class Footer extends StatelessWidget {
             ),
             Container(
               width: screenSize.width,
-              height: screenSize.height * 0.55,
+              height: screenSize.height * 0.6,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +44,20 @@ class Footer extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            width: screenSize.width * 0.12,
+                            width: screenSize.width * 0.10,
+                            height: screenSize.height * 0.05,
+                            decoration: const BoxDecoration(
+                                //color: Colors.lightBlueAccent,
+                                image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/logo/protalent.png'),
+                                    fit: BoxFit.fill)),
+                          ),
+                          const Spacer(
+                            flex: 8,
+                          ),
+                          Container(
+                            width: screenSize.width * 0.1,
                             height: screenSize.height * 0.08,
                             decoration: const BoxDecoration(
                                 //color: Colors.lightBlueAccent,
@@ -46,7 +66,9 @@ class Footer extends StatelessWidget {
                                         'assets/logo/logo-eksad.png'),
                                     fit: BoxFit.fill)),
                           ),
-                          const Spacer(),
+                          const Spacer(
+                            flex: 5,
+                          ),
                           Container(
                             width: screenSize.width * 0.2,
                             height: screenSize.height * 0.05,
@@ -70,54 +92,73 @@ class Footer extends StatelessWidget {
                             width: screenSize.width * 0.14,
                             height: screenSize.height * 0.03,
                             //color: Colors.blue,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    launch(
-                                        'https://www.linkedin.com/company/pt-tiga-daya-digital-indonesia-triputra-group-eksad-technology');
-                                  },
-                                  icon: const Icon(
-                                    FontAwesomeIcons.linkedinIn,
-                                    size: 30,
-                                  ),
-                                  iconSize: 20,
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    launch(
-                                        'https://twitter.com/eksadtechnology/');
-                                  },
-                                  icon: const Icon(
-                                    FontAwesomeIcons.twitter,
-                                    size: 30,
-                                  ),
-                                  iconSize: 20,
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    launch(
-                                        'https://www.instagram.com/eksad_technology/');
-                                  },
-                                  icon: const Icon(
-                                    FontAwesomeIcons.instagram,
-                                    size: 30,
-                                  ),
-                                  iconSize: 20,
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    launch(
-                                        'https://www.youtube.com/channel/UCiZgIbpWgrAMrHW-TaS9EPw');
-                                  },
-                                  icon: const Icon(
-                                    FontAwesomeIcons.youtube,
-                                    size: 30,
-                                  ),
-                                  iconSize: 20,
-                                )
-                              ],
+                            child: FutureBuilder<List<dynamic>>(
+                              future: getSosmedDesc(),
+                              builder: (BuildContext context,
+                                  AsyncSnapshot snapshot) {
+                                var pgm = snapshot.data[0];
+                                if (snapshot.hasError ||
+                                    snapshot.data == null ||
+                                    snapshot.connectionState ==
+                                        ConnectionState.waiting) {
+                                  return const CircularProgressIndicator();
+                                }
+                                return Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    IconButton(
+                                        onPressed: () {
+                                          ln = pgm['linkedin'];
+                                          launch(ln);
+                                          // _launchLinkedIn();
+                                        },
+                                        icon: const Icon(
+                                          FontAwesomeIcons.linkedinIn,
+                                          size: 25,
+                                        ),
+                                        iconSize: 25,
+                                        color: Colors.black),
+                                    IconButton(
+                                      onPressed: () {
+                                        tw = pgm['twitter'];
+                                        launch(tw);
+                                        //_launchTwitter();
+                                      },
+                                      icon: const Icon(
+                                        FontAwesomeIcons.twitter,
+                                        size: 25,
+                                      ),
+                                      iconSize: 25,
+                                      color: Colors.black,
+                                    ),
+                                    IconButton(
+                                        onPressed: () {
+                                          ig = pgm['instagram'];
+                                          launch(ig);
+                                          // _launchInstagram();
+                                        },
+                                        icon: const Icon(
+                                          FontAwesomeIcons.instagram,
+                                          size: 25,
+                                        ),
+                                        iconSize: 25,
+                                        color: Colors.black),
+                                    IconButton(
+                                        onPressed: () {
+                                          yt = pgm['youtube'];
+                                          launch(yt);
+                                          //  _launchYoutube();
+                                        },
+                                        icon: const Icon(
+                                          FontAwesomeIcons.youtube,
+                                          size: 25,
+                                        ),
+                                        iconSize: 25,
+                                        color: Colors.black)
+                                  ],
+                                );
+                              },
                             ),
                           ),
                           const Spacer(
@@ -234,7 +275,7 @@ class Footer extends StatelessWidget {
                         ],
                       )),
                   Container(
-                      width: screenSize.width * 0.25,
+                      width: screenSize.width * 0.28,
                       height: screenSize.height * 0.55,
                       //color: Colors.blue,
                       child: Column(
@@ -245,71 +286,29 @@ class Footer extends StatelessWidget {
                             width: screenSize.width * 0.2,
                             height: screenSize.height * 0.07,
                             child: Text(
-                              ' Contact',
+                              '  Contact',
                               style: GoogleFonts.poppins(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.5),
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          Container(
-                            width: screenSize.width * 0.2,
-                            child: ListTile(
-                              leading: const Icon(
-                                Icons.phone,
-                                size: 22,
-                              ),
-                              title: TextButton(
-                                onPressed: () {
-                                  launch('tel:02157958040');
-                                },
-                                child: Container(
-                                  height: screenSize.height * 0.04,
-                                  child: Text(
-                                    '(021) 5795 - 8040',
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 16,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: screenSize.width * 0.2,
-                            child: ListTile(
-                              leading: const Icon(
-                                Icons.mail,
-                                size: 22,
-                              ),
-                              title: TextButton(
-                                onPressed: () {
-                                  launch(
-                                      'mailto:Hello@eksad.com?subject=Hello saya ingin bertanya tentang protalent');
-                                },
-                                child: Container(
-                                  height: screenSize.height * 0.04,
-                                  child: Text(
-                                    'Hello@eksad.com',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 16, color: Colors.black87),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          const SizedBox(height: 5),
+
+                          TelphoneApi(),
+                          EmailAPI(),
                           Container(
                             width: screenSize.width * 0.25,
-                            height: screenSize.height * 0.29,
+                            height: screenSize.height * 0.30,
                             child: ListTile(
                                 leading: const Icon(
                                   Icons.location_on,
                                   size: 25,
+                                  color: Colors.black,
                                 ),
                                 title: Container(
-                                  padding: const EdgeInsets.only(left: 14),
+                                  padding:
+                                      const EdgeInsets.only(left: 14, top: 10),
                                   width: screenSize.width * 0.25,
                                   height: screenSize.height * 0.3,
                                   child: Text(
@@ -366,8 +365,100 @@ class itemBawah extends StatelessWidget {
               color: const Color(0xff1e5ea8),
               //decoration: TextDecoration.underline,
               fontSize: 17,
-            letterSpacing: 1.2
-          ),
+              letterSpacing: 1.2),
         ));
+  }
+}
+
+class TelphoneApi extends StatefulWidget {
+  const TelphoneApi({Key? key}) : super(key: key);
+
+  @override
+  State<TelphoneApi> createState() => _TelphoneApiState();
+}
+
+class _TelphoneApiState extends State<TelphoneApi> {
+  String no = '';
+  @override
+  Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    return FutureBuilder<List<dynamic>>(
+      future: getSettingDesc(),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        var pgm = snapshot.data[0];
+        if (snapshot.hasError ||
+            snapshot.data == null ||
+            snapshot.connectionState == ConnectionState.waiting) {
+          return const CircularProgressIndicator();
+        }
+        return Container(
+          width: screenSize.width*0.23,
+          child: ListTile(
+            minLeadingWidth: 50,
+            onTap: (){
+              no = pgm['no'];
+              //02157958040
+              launch('tel:$no');
+            },
+            leading: const Icon(
+              Icons.phone,
+              size: 23,
+              color: Colors.black,
+            ),
+            title: Text(
+              pgm['no'],
+              style: GoogleFonts.poppins(
+                  fontSize: 16, color: Colors.black87, letterSpacing: 1.5),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class EmailAPI extends StatefulWidget {
+  const EmailAPI({Key? key}) : super(key: key);
+
+  @override
+  State<EmailAPI> createState() => _EmailAPIState();
+}
+
+class _EmailAPIState extends State<EmailAPI> {
+  String email = '';
+  @override
+  Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    return FutureBuilder<List<dynamic>>(
+      future: getSettingDesc(),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        var pgm = snapshot.data[0];
+        if (snapshot.hasError ||
+            snapshot.data == null ||
+            snapshot.connectionState == ConnectionState.waiting) {
+          return const CircularProgressIndicator();
+        }
+        return Container(
+          width: screenSize.width * 0.23,
+          child: ListTile(
+            minLeadingWidth: 50,
+            onTap: (){
+              email = pgm['email'];
+              launch('mailto:$email?subject=Info MCS');
+            },
+            leading: const Icon(
+              Icons.mail,
+              size: 23,
+              color: Colors.black,
+            ),
+            title: Text(
+              pgm['email'],
+              style: GoogleFonts.poppins(
+                  fontSize: 16, color: Colors.black87, letterSpacing: 1.1),
+            ),
+          ),
+        );
+      },
+    );
   }
 }

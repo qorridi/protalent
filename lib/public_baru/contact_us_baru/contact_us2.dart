@@ -21,6 +21,7 @@ class ContactUs2 extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       height: 480,
+      padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.1),
       width: screenSize.width,
       // color: Colors.blue,
       decoration: const BoxDecoration(
@@ -35,45 +36,41 @@ class ContactUs2 extends StatelessWidget {
       )),
       child: Row(
         children: [
-          const Spacer(
-            flex: 3,
-          ),
           Container(
             height: screenSize.height * 0.7,
-            width: screenSize.width * 0.35,
+            width: screenSize.width * 0.37,
             child: Container(
               padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   Container(
-                    height: screenSize.height * 0.23,
+                    height: screenSize.height * 0.19,
                     child: Text(
                         'Yes, you need '
                         '\n'
                         'an outsourcing partner '
                         'you can trust and thrive with',
-                        textAlign: TextAlign.justify,
+                        textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                             color: Colors.white,
-                            fontSize: 30,
+                            fontSize: 27,
                             fontWeight: FontWeight.bold)),
                   ),
                   const Spacer(
                     flex: 1,
                   ),
                   Container(
-                    height: screenSize.height * 0.3,
+                    height: screenSize.height * 0.22,
                     child: Text(
                         'Go for the one who knows what they are doing, those who you share values with, '
                         'and those who will celebrate your success, and help you win over your biggest challenges. '
                         '\nLooking for an outsourcing partner? ',
-                        textAlign: TextAlign.justify,
+                        textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                             color: Colors.white,
-                            fontSize: 18,
+                            fontSize: 16,
                             // fontWeight: FontWeight.bold,
                             letterSpacing: 1.1)),
                   ),
@@ -83,7 +80,7 @@ class ContactUs2 extends StatelessWidget {
                   Text("We’ll contact you immediately to discuss to help you.",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           letterSpacing: 1.2)),
                   const Spacer(
                     flex: 2,
@@ -120,6 +117,7 @@ class ContactUs2 extends StatelessWidget {
                         hintText: "Enter your Name",
                         fillColor: Colors.white,
                         filled: true,
+                        errorStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide: BorderSide(width: 1, color: Colors.white),
@@ -129,6 +127,12 @@ class ContactUs2 extends StatelessWidget {
                           borderSide: BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '*Please enter your name';
+                        }
+                        return null;
+                      },
                     ),
                   ),
                   const SizedBox(
@@ -169,6 +173,7 @@ class ContactUs2 extends StatelessWidget {
                             hintText: "Enter a valid phone number",
                             fillColor: Colors.white,
                             filled: true,
+                            errorStyle: TextStyle(color: Colors.white),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
                               borderSide:
@@ -180,6 +185,12 @@ class ContactUs2 extends StatelessWidget {
                                   BorderSide(width: 1, color: Colors.white),
                             ),
                           ),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return '*Please enter your phone number';
+                            }
+                            return null;
+                          },
                         ),
                       ),
                       const SizedBox(
@@ -193,6 +204,7 @@ class ContactUs2 extends StatelessWidget {
                             hintText: "Enter a valid email address",
                             fillColor: Colors.white,
                             filled: true,
+                            errorStyle: TextStyle(color: Colors.white),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.zero,
                               borderSide:
@@ -204,6 +216,14 @@ class ContactUs2 extends StatelessWidget {
                                   BorderSide(width: 1, color: Colors.white),
                             ),
                           ),
+                          validator: (value) {
+                            if (value == null ||
+                                value.isEmpty ||
+                                !value.isValidEmail()) {
+                              return '*Please enter your email address';
+                            }
+                            return null;
+                          },
                         ),
                       ),
                       const SizedBox(
@@ -230,6 +250,7 @@ class ContactUs2 extends StatelessWidget {
                         hintText: "Enter your message",
                         fillColor: Colors.white,
                         filled: true,
+                        errorStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.zero,
                           borderSide: BorderSide(width: 1, color: Colors.white),
@@ -242,7 +263,7 @@ class ContactUs2 extends StatelessWidget {
                       maxLines: 5,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return '*Required';
+                          return '*Please enter message';
                         }
                         return null;
                       },
@@ -289,9 +310,6 @@ class ContactUs2 extends StatelessWidget {
               ),
             ),
           ),
-          const Spacer(
-            flex: 3,
-          ),
         ],
       ),
     );
@@ -319,5 +337,13 @@ class ContactUs2 extends StatelessWidget {
           }
         }));
     return response.statusCode;
+  }
+}
+
+extension EmailValidator on String {
+  bool isValidEmail() {
+    return RegExp(
+            r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+        .hasMatch(this);
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:protalent_eksad/api/setting_api.dart';
 import 'package:protalent_eksad/footer.dart';
 import 'package:protalent_eksad/conts_warna.dart';
 import 'package:protalent_eksad/public_baru/contact_us_baru/contact_us2.dart';
@@ -37,10 +38,10 @@ class _HomePageNewState extends State<HomePageNew> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    setPageTitle('Protalent by Eksad', context);
+    //setPageTitle('Protalent by Eksad', context);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        key: _scaffoldKey,
+      key: _scaffoldKey,
       floatingActionButton: WAChat(),
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppBarKecil()
@@ -48,50 +49,56 @@ class _HomePageNewState extends State<HomePageNew> {
               Colors.black, Colors.black, Colors.black),
       drawer: DrawerProtalent(),
       body: ResponsiveWidget.isSmallScreen(context)
-     ? ListView(
-        children: [
-          HomeSmall1(),
-          HomeSmall2(),
-          HomeSmall3(),
-          HomeSmall4(),
-          ContactUs2_small(),
-          const FooterSmall(),
-        ],
-      )
-        : ListView(
-        children: [
-          const HomeNew1(),
-          const HomeNew2(),
-          const HomeNew3(),
-          const HomeNew4(),
-          ContactUs2(),
-          const Footer(),
-        ],
-      )
+          ? ListView(
+              children: [
+                HomeSmall1(),
+                HomeSmall2(),
+                HomeSmall3(),
+                HomeSmall4(),
+                ContactUs2_small(),
+                const FooterSmall(),
+              ],
+            )
+          : FutureBuilder<dynamic>(
+              future: getSettingTitle(),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                var pgm = snapshot.data[0];
+                return Title(
+                  title: pgm['title'],
+                  color: Colors.white,
+                  child: ListView(
+                    children: [
+                      const HomeNew1(),
+                      const HomeNew2(),
+                      const HomeNew3(),
+                      const HomeNew4(),
+                      ContactUs2(),
+                      Footer(),
+                    ],
+                  ),
+                );
+              },
+            ),
     );
   }
-
-
-
-
-
-
-
-
-
 
   AppBar AppBarKecil() {
     return AppBar(
       leading: IconButton(
         onPressed: () => _scaffoldKey.currentState!.openDrawer(),
-        icon: Icon(Icons.list_outlined,size: 30,color: Colors.black,),),
+        icon: Icon(
+          Icons.list_outlined,
+          size: 30,
+          color: Colors.black,
+        ),
+      ),
       backgroundColor: Colors.white,
       centerTitle: true,
       title: Container(
         child: SizedBox(
           height: 50,
           width: 150,
-          child: Image.asset("assets/logo/logo_protalent.png"),
+          child: Image.asset("assets/logo/protalent.png"),
         ),
       ),
 
@@ -99,5 +106,3 @@ class _HomePageNewState extends State<HomePageNew> {
     );
   }
 }
-
-

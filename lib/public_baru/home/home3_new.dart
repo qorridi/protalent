@@ -21,15 +21,15 @@ class _HomeNew3State extends State<HomeNew3> {
       child: Column(
         children: [
           const SizedBox(
-            height: 30,
+            height: 25,
           ),
           Text("Why Protalent ?",
               style: GoogleFonts.poppins(
-                  fontSize: 36,
+                  fontSize: 27,
                   color: const Color(0xff1e5ea8),
                   fontWeight: FontWeight.bold)),
           const SizedBox(
-            height: 40,
+            height: 25,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -60,7 +60,7 @@ class _HomeNew3State extends State<HomeNew3> {
                         'We work as an extension of your team.',
                         style: TextStyle(
                             color: Colors.blueAccent,
-                            fontSize: 17,
+                            fontSize: 16,
                             letterSpacing: 1.1,
                             fontWeight: FontWeight.w600),
                         textAlign: TextAlign.center,
@@ -72,7 +72,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: const EdgeInsets.only(top: 10),
                         width: 220,
-                        height: screenSize.height * 0.55,
+                        height: screenSize.height * 0.6,
                         child: const Animasi_Kanan_Kiri(
                             judul:
                                 'We work as a true extension of your team. We believe in rolling up our sleeves, diving in and working together to deliver the top-quality, tailored solutions our clients need to grow and thrive.'))
@@ -104,7 +104,7 @@ class _HomeNew3State extends State<HomeNew3> {
                         'We offer smart tailored outsourcing and HR solutions.',
                         style: TextStyle(
                             color: Colors.blueAccent,
-                            fontSize: 17,
+                            fontSize: 16,
                             letterSpacing: 1.1,
                             fontWeight: FontWeight.w600),
                         textAlign: TextAlign.center,
@@ -116,7 +116,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: const EdgeInsets.only(top: 10),
                         width: 220,
-                        height: screenSize.height * 0.55,
+                        height: screenSize.height * 0.6,
                         child: const Animasi_Kanan_Kiri(
                             judul:
                                 'Through our tailored approach, exceptional support, and flexible solutions, we make'
@@ -150,7 +150,7 @@ class _HomeNew3State extends State<HomeNew3> {
                         'We have a rich outsourcing experience across various industries.',
                         style: TextStyle(
                             color: Colors.blueAccent,
-                            fontSize: 17,
+                            fontSize: 16,
                             letterSpacing: 1.1,
                             fontWeight: FontWeight.w600),
                         textAlign: TextAlign.center,
@@ -162,7 +162,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: const EdgeInsets.only(top: 10),
                         width: 220,
-                        height: screenSize.height * 0.55,
+                        height: screenSize.height * 0.6,
                         child: const Animasi_Kanan_Kiri(
                             judul:
                                 'We have been providing outsourcing solutions to variance clients for eight years '
@@ -195,7 +195,7 @@ class _HomeNew3State extends State<HomeNew3> {
                         'We Are Expert recruiters.',
                         style: TextStyle(
                             color: Colors.blueAccent,
-                            fontSize: 17,
+                            fontSize: 16,
                             letterSpacing: 1.1,
                             fontWeight: FontWeight.w600),
                         textAlign: TextAlign.center,
@@ -207,7 +207,7 @@ class _HomeNew3State extends State<HomeNew3> {
                     Container(
                         padding: const EdgeInsets.only(top: 10),
                         width: 220,
-                        height: screenSize.height * 0.55,
+                        height: screenSize.height * 0.6,
                         child: ShowUpAnimation(
                           delayStart: const Duration(seconds: 1),
                           curve: Curves.decelerate,
@@ -220,7 +220,7 @@ class _HomeNew3State extends State<HomeNew3> {
                                   'honesty and transparency with our clients so as to develop long term relationships'
                                   ' and to adopt flexible approach as per their needs.',
                               style: GoogleFonts.poppins(
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.3,
                                   height: 1.4),

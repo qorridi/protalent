@@ -22,12 +22,12 @@ class SideMenuManageTalent extends StatefulWidget {
 
 class _SideMenuManageTalentState extends State<SideMenuManageTalent> {
   List<Widget> views = [
-    MainDashboard(),
+   // MainDashboard(),
     SettingDashboard(),
     PagesDashboard(),
     PostDashboard(),
     MasterData(),
-    ClientDashboard(),
+    UserControl(),
     AddTalent(),
   ];
   int selectedIndex = 0;
